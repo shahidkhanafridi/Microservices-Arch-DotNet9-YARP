@@ -4,4 +4,6 @@ builder.Services.AddReverseProxy().LoadFromConfig(builder.Configuration.GetSecti
 
 var app = builder.Build();
 
+app.MapReverseProxy();
+
 app.Run();
