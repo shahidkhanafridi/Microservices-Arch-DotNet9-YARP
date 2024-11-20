@@ -1,10 +1,12 @@
 using BlogApi.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class PostsController : ControllerBase
     {
         private readonly ILogger<PostsController> _logger;
